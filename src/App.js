@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import {Switch, Route} from 'react-router-dom'
-import Header from "./components/Header/Header";
+import {Route} from 'react-router-dom'
 import Main from "./components/Main/Main";
 
 import './App.css';
@@ -10,7 +9,6 @@ class App extends Component {
         return (
             <div className="App">
                 <div className={'App-Box'}>
-                    <Route path="/" exact component={Header}/>
                     <Route path="/" exact component={Main}/>
                 </div>
             </div>

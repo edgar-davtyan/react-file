@@ -1,16 +1,15 @@
 import React from "react";
 import './MainBox.css'
-import {withRouter} from 'react-router-dom'
 
 
-const MainBox = props => {
+function MainBox (props) {
     return (
         <div className={'MainBox'}>
             <div>
                 <p>{props.number}</p>
-                <button onClick={props.onClick}>Click</button>
+                <button onClick={props.onDeleteBox}>Delete</button>
             </div>
         </div>
     )
-};
-export default withRouter(MainBox)
+}
+export default MainBox
