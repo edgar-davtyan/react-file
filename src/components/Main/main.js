@@ -1,15 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import './Main.css'
 import MainBox from "./MainBox/MainBox";
 import Header from "../Header/Header";
-import Button from "../UI/Button/Button";
+import Button from "../UI/Button";
 
 class Main extends React.Component {
-    states = {
-        num: [
-
-        ]
-    };
     state = {
         numbers: [
             {number: 0}
@@ -17,7 +12,15 @@ class Main extends React.Component {
     };
 
     sortCards = () => {
-
+        const countSort = [0];
+        for (let i = 0; i < this.state.numbers.length; i++) {
+            const s = this.state.numbers[i].number;
+            countSort.push(s);
+            const l = countSort.sort();
+           this.setState({
+               number : l
+           });
+        }
     };
 
     addCard = () => {

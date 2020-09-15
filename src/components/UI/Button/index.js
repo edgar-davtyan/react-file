@@ -2,7 +2,7 @@ import React from "react";
 import './Button.css'
 import {withRouter} from 'react-router-dom'
 
-const Button = props => {
+const Index = props => {
     return(
         <div className={'Button'}>
             <button onClick={props.onClick}>{props.name}</button>
@@ -10,4 +10,4 @@ const Button = props => {
     )
 };
 
-export default withRouter(Button)
+export default withRouter(Index)
